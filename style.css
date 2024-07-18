@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+/* Preset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header */
+
+.generator-body {
+  height: 50dvh;
+  width: 100dvw;
+  background: url(bgimg.png);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+
+.generator-body > h1 {
+  font-size: 3rem;
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 5px;
+  background-image: url(textimg.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.generator-body > p {
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Form */
+
+form {
+  height: 50px;
+  width: 40vw;
+  background: #fff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+form > input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 24px;
+}
+
+form > .btns {
+  display: flex;
+  align-items: center;
+}
+
+form > .btns > select {
+  padding: 10px;
+  border-radius: 24px;
+}
+
+form > .btns > button {
+  background: rgba(0, 0, 255, 0.75);
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 24px;
+  margin-left: 10px;
+  animation: btn-pulse 2s ease 0s infinite normal none;
+}
+
+select,
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+/* image-gallery */
+.image-gallery {
+  max-width: 90%;
+  background: beige;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
+.img-card {
+  margin: 20px;
+  position: relative;
+}
+
+
+.img-card > img {
+  border-radius: 24px;
+}
+
+.items {
+  height: 40px;
+  width: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 10px;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+/* copyright */
+
+#copyright {
+  background: beige;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 10px;
+}
+#copyright > a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Animations */
+
+@keyframes btn-pulse {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+.blinker {
+  animation: blink 2s ease 0s infinite normal none;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* custom scrollbar */
+
+
+
+::-webkit-scrollbar {
+  width: 3px;  
+  height: 3px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: skyblue; 
+  border-radius: 10px; 
+  border: 3px solid #f1f1f1;
+}
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: skyblue #f1f1f1; 
+}
+
+
+/* media queries */
+
+@media (max-width: 1024px) {
+  .generator-body {
+    gap: 10px;
+    width: 100%;
+    height: 60vh;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  form > .btns > button {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .generator-body {
+    gap: 5px;
+    width: 100%;
+    height: 60vh;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  form > .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form > .btns > button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  form > .btns > select {
+    width: 100%;
+  }
+  form input {
+    position: relative;
+    top: -9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .generator-body {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .generator-body > h1 {
+    font-size: 1.2rem;
+  }
+
+  form {
+    width: 80%;
+    max-width: none;
+    position: relative;
+  }
+  form input {
+    position: relative;
+    top: -9px;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Image-Builder</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body style="overflow-x:hidden; background:beige;">
+  
+  <section class="generator-body">
+    <h1 class="blinker">AI image generator Tool</h1>
+    <p>
+      Convert your text into an image within a second using this
+      Javascript-powered AI image generator tool👌
+    </p>
+    <form action="#" id="search-form">
+      <input type="text" required placeholder="search here...." />
+      <div class="btns">
+        <select id="img-selector">
+          <option value="1img">1-image</option>
+          <option value="2img">2-images</option>
+          <option value="3img">3-images</option>
+          <option value="4img" selected>4-images</option>
+        </select>
+        <button type="submit" class="generate-btn">generate</button>
+      </div>
+    </form>
+  </section>
+  <section class="image-gallery">
+    <div class="img-card">
+      <img src="sample1.jpg" width="300" height="300">
+     
+    </div>
+    <div class="img-card">
+      <img src="sample2.jpg" width="300" height="300">
+     
+    </div>
+    <div class="img-card">
+      <img src="sample3.jpg" width="300" height="300">
+     
+    </div>
+    <div class="img-card">
+      <img src="sample4.jpg" width="300" height="300">
+     
+  
+  </div>
+  </section>
+  <div id="copyright">Developed by <a href="https://github.com/jsNoobSaiBot"><i class="fa-brands fa-github"></i> jsNoobSaiBot</a></div>
+  <script src="script.js"></script>
+</body>
+</html>
